@@ -1,1 +1,1 @@
-print("Hola"+ input("Introduce tu nombre: "))
+print("Hola "+ input("Introduce tu nombre: "))
