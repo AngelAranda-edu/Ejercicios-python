@@ -1,0 +1,1 @@
+print(f"Media de los tres valores:  {(int(input('Numero 1: ')) + int(input('Numero 2: ')) + int(input('Numero 3: '))) /3} ")
