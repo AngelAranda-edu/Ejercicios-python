@@ -1,5 +1,7 @@
+import os
 diccionario = {"Ana López": "601123456", "Luis Martín": "602987654", "Marta Pérez": "603555777", "David Gómez": "604112233", "Elena Ruiz": "605900800"}
 while True:
+    os.system("clear")
     print("Opciones: \n1 - Añadir/Modificar\n2 - Buscar\n3 - Borrar\n4 - Listar\n5 - Salir")
     opcion = input("Introduce una ocpión: ")
     if opcion == "1":
@@ -26,7 +28,7 @@ while True:
             print(f"No existe ningun usuario que empiece por {cadena}")
             continue
         for nombre in coincidencia:
-            print(nombre)
+            print(nombre, " - ", diccionario[nombre])
     elif opcion == "3":
         nombre = input("Introduce el nombre del usuario: ")
         if nombre in diccionario:
@@ -40,7 +42,10 @@ while True:
             print("El usuario no existe")
     elif opcion == "4":
         for nombre, telefono in diccionario.items():
-            print(f"{nombre} : {telefono}")
+            print(f"{nombre} : {telefono}") 
     elif opcion == "5":
-        print("Saliendo.....")    
-        break    
+        print("Saliendo.....")
+        break
+    else:
+        print("Introduce una opción valida")
+    input("Pulsar ENTER para continuar...")
